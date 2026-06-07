@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body-md min-h-screen selection:bg-primary-container selection:text-on-primary-container relative overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .brutalist-border {
+      border: 3px solid #1e1b1b;
+  }
+  .brutalist-shadow {
+      box-shadow: 4px 4px 0px 0px #1e1b1b;
+  }
+  .brutalist-hover:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px 0px #1e1b1b;
+  }
+  .brutalist-active:active {
+      transform: translate(4px, 4px) scale(0.96);
+      box-shadow: 0px 0px 0px 0px #1e1b1b;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f5ecec;
+      border-radius: 4px;
+      border: 1px solid #1e1b1b;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #2b6765;
+      border-radius: 4px;
+      border: 1px solid #1e1b1b;
+  }
+
+  .star-dec {
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+}
+
+.svg-ring-bg {
+    stroke: #e9e0e1;
+}
+.svg-ring-progress {
+    stroke: #b2000a;
+    transition: stroke-dashoffset 1s linear;
+}
