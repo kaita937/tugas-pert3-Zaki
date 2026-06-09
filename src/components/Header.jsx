@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function Header() {
+export default function Header({ userName }) {
   const [time, setTime] = useState('');
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function Header() {
           {time || '00:00'}
         </h1>
         <p className="text-headline-md font-headline-md text-on-surface mt-2">
-          Selamat Malam, <span className="text-secondary">Zaki</span>
+          Selamat Malam, <span className="text-secondary">{userName || 'Pengguna'}</span>
         </p>
       </div>
       <div className="mt-4 md:mt-0 flex gap-2">
